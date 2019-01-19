@@ -1,0 +1,9 @@
+<- Ship ----------------------------------------------------------------------
+
+Class use to create player's ship,
+store the position of the shp's sprite
+
+
+function to get and set sprite 1 and sprite 2 are sets.
+
+---------------------------------------------------------------------- Ship ->

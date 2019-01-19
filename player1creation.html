@@ -1,0 +1,45 @@
+<html>
+<style>
+  body{
+    font-family: Roboto,sans-serif;
+    background-color: #D3D3D3;
+  }
+  h1{
+    text-align: center;
+    font-size: 60px;
+    color: white
+  }
+  .wrapper{
+    display:grid;
+    grid-template-columns: auto 815px auto;
+    grid-auto-rows: minmax (100px, auto);
+    grid-gap:1em;
+    color: white;
+  }
+  .box1{
+    grid-column: 2/3;
+    text-align: center;
+  }
+  .button {
+    border: none;
+    color: #ADD8E6;
+    padding: 5px;
+    border-radius: 6px;
+  }
+</style>
+<body>
+  <h1>
+    PLAYER ONE
+  </h1>
+  <div class="wrapper">
+  <form method="POST" action="create_ship.php">  
+    Choose a glorious name: <input type="text" name="name" value ="" />
+    <br />
+    Choose your ship:
+    <br />
+    <input class="button" type="submit" name="p1" value="cruiser">
+    <input class="button" type="submit" name="p1" value="destroyer">
+    <input class="button" type="submit" name="p1" value="x-wing">
+  </form>
+</div>
+</html></body>

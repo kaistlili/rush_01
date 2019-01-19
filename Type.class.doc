@@ -1,0 +1,14 @@
+<- Type ----------------------------------------------------------------------
+
+Class use to create SPECIFIC ship value, use to create dfferent one.
+3 exemples were set thought they are not really of use for the demo.
+- cruiser
+- destroyer
+- x wing
+Each ship can be build with specific stats.
+
+store 3 variables, name, shield and weapons.
+function to get name and shield are in place.
+function to set shield is in place.
+
+---------------------------------------------------------------------- Type ->
