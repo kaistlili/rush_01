@@ -13,7 +13,7 @@
         $conn = init_db();
         if (!$conn)
         {
-            echo "error connecting to db";
+            echo "rout error connecting to db";
             return;
         }
         $request = "SELECT `login` FROM `users` WHERE `login` LIKE '".$_POST["login"]."';";

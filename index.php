@@ -45,9 +45,14 @@
   <?PHP 
 		if (array_key_exists("login", $_SESSION)) {
 		echo "
-		<form action='login/logout.php'>
-			<button type='submit' name='logout'>Log Out</button>
-		</form>";
+		<div class='box box1'>
+			<form action='hub.php'>
+				<button class='button' type='submit' name='hub'>Hub</button>
+			</form>
+			<form action='login/logout.php'>
+				<button class='button' type='submit' name='logout'>Log Out</button>
+			</form>
+		</div>";
 		return;}
 		?>
 	  
@@ -55,12 +60,12 @@
 	  <label for="login">Login</label>
 	  <input type="text" name="login" id="login">
 	  <label for="pwd">Password</label>
-	  <input type="password" name="pwd" id="pwd">  
-		<button type="submit" name="signin" value="start">Sign In</button>
+	  <input type="password" name="pwd" id="pwd"><br /> 
+		<button class='button' type="submit" name="signin" value="start">Sign In</button>
 
 	  </form>
-	  <form action="login/create_account.php">
-			<button type="submit" name="Sign up">Sign up</button>
+	  <form class="box box1" action="login/create_account.php">
+			<button class='button' type="submit" name="Sign up">Sign up</button>
 		</form>
 </div>
 </html></body>
