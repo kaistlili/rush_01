@@ -1,9 +1,22 @@
+
+<html>
+<head>
+	<style>
+		body {
+		font-family: Roboto,sans-serif;
+		background-color: white;
+		}
+	</style>>
+</head>
+<body>
+
+
 <?php
 
 session_start();
 
 $a = $_SESSION["login"];
-echo "$a\n";
+echo "<b>$a</b><br />\n";
 
 if ($_SESSION["login"] !== NULL && $_SESSION["login"] != "")
 {
@@ -35,3 +48,6 @@ else
 }
 
 ?>
+	
+</body>
+</html>

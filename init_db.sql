@@ -1,5 +1,5 @@
-CREATE DATABASE IF NOT EXISTS db_rush01_test;
+CREATE DATABASE IF NOT EXISTS db_rush01;
 USE db_rush01;
 CREATE TABLE IF NOT EXISTS `users` (`id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL, `login` VARCHAR(32) NOT NULL, `pwd` VARCHAR(64) NOT NULL);
 CREATE TABLE IF NOT EXISTS `games` (`Game id` INT PRIMARY KEY AUTO_INCREMENT NOT NULL, `login_p1` VARCHAR(32) NOT NULL, 
-    `login_p2` VARCHAR(32) NOT NULL, `ship1` VARCHAR(32), `ship2` VARCHAR(32), `move_p1` TINYINT, `move_p2` TINYINT, `strike_p1` TINYINT, `strike_p2` TINYINT, `quote_p1` VARCHAR(255), `quote_p2` VARCHAR(255), `state` ENUM('p1','p2', 'running', 'open') NOT NULL);
+    `login_p2` VARCHAR(32), `ship1` VARCHAR(32), `ship2` VARCHAR(32), `move_p1` TINYINT, `move_p2` TINYINT, `strike_p1` TINYINT, `strike_p2` TINYINT, `quote_p1` VARCHAR(255), `quote_p2` VARCHAR(255), `state` ENUM('p1','p2', 'running', 'open') NOT NULL);

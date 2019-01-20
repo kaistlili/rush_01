@@ -7,8 +7,7 @@
         echo "You are already loggued in as : ".$_SESSION["login"];
         return;
     }
-    $retry_msg = "missing stuff";
-    if (($_POST["login"] && $_POST["email"] && $_POST["pwd"] && $_POST["confirm_pwd"]) && ($_POST["pwd"] == $_POST["confirm_pwd"]))
+    if (($_POST["login"] && $_POST["pwd"] && $_POST["confirm_pwd"]) && ($_POST["pwd"] == $_POST["confirm_pwd"]))
     {
         $conn = init_db();
         if (!$conn)
@@ -36,23 +35,55 @@
         }
     }
     else if ($_POST["pwd"]!= $_POST["confirm_pwd"])
-        $retry_msg = "passwod confirmation failed";
-    echo $retry_msg;
+        echo "passwod confirmation failed";
+
 ?>
 
 <html>
-<header></header>
+<head>
+    <style>
+    body{
+        font-family: Roboto,sans-serif;
+        background-color: #D3D3D3;
+    }
+    h1{
+        text-align: center;
+        font-size: 60px;
+        color: white
+    }
+    .wrapper{
+        padding: 2em;
+        display:grid;
+        grid-template-columns: auto 815px auto;
+        grid-auto-rows: minmax (100px, auto);
+        grid-gap:1em;
+        color: white;
+    }
+    .box1{
+        grid-column: 2/3;
+        text-align: center;
+    }
+    .button {
+        border: none;
+        color: #D3D3D3;
+        padding: 5px;
+        border-radius: 6px;
+    }
+    </style>
+</head>
 <body>
+        <div clas="wrapper">
+        <div class="box box1">
 <form method="POST" action="create_account.php">
 	<label for="login">Login: </label>
     <input type="text" name="login"> </br>
-    <label for="email">Email: </label>
-	<input type="text" name="email"> </br>
 	<label for="pwd">Password: </label>
     <input type="password" name="pwd"> </br> 
     <label for="pwd">Confirm Password: </label>
 	<input type="password" name="confirm_pwd"></br>
-	<button type="submit" name="signin" value="start">Create Account</button>
+	<button class="button" type="submit" name="signin" value="start">Create Account</button>
 	</form>
+            </div>
+    </div>
 </body>
 </html>
