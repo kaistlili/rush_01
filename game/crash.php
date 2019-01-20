@@ -31,10 +31,10 @@
 <body>
 
   <h1>
-  You have won !
+  RIP You have crashed your ship !
   </h1>
   <div class="wrapper">
-  	<form class="box box1" method="POST" action="player1creation.html">  
+  	<form class="box box1" method="POST" action="../hub.php">  
   	  <input class="button" type="submit" name="start" value="new game">
   	</form>
 </div>
